@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +11,13 @@ import { CommonModule } from '@angular/common';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
+
+//  constructor(private service : UserService){}
+   
   @Input({ required: true }) isAuthenticated = false;
+
+  // onLogout(){
+  //   this.service.logOut()
+  // }
 }
 

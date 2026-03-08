@@ -28,6 +28,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.userService.getCurrentUser().subscribe((user) => {
       this.userState.set(user);
+      console.log("valore autenticazione : ", this.isAuthenticated())
     });
   }
 }

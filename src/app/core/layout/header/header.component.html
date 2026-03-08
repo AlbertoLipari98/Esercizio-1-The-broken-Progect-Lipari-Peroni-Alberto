@@ -12,6 +12,7 @@
       class="header__logout"
       *ngIf="isAuthenticated"
       type="button"
+      (click)="onLogout()"
     >
       Logout
     </button>

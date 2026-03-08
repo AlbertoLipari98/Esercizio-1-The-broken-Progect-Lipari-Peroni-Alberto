@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 
 export interface User {
   name: string;
@@ -10,11 +10,30 @@ export interface User {
   providedIn: 'root',
 })
 export class UserService {
-  getCurrentUser(): Observable<User> {
-    return of({
-      name: 'Mario Rossi',
-      role: 'client',
-    });
+
+
+  getCurrentUser(): Observable<User>{
+    return of(null)
   }
+
+  // private user$ = new BehaviorSubject<User | null>({
+  //   name: 'Mario Rossi',
+  //   role: 'client'
+  // })
+
+  // getCurrentUser(): Observable<User | null> {
+    
+  //       return this.user$.asObservable()
+    
+    
+  // }
+
+  // logOut(){
+  //   this.user$.next(null)
+  // }
+
+
+
+  
 }
 
