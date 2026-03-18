@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 
 export interface User {
@@ -10,6 +10,8 @@ export interface User {
   providedIn: 'root',
 })
 export class UserService {
+
+  isAuthenticated = signal<boolean>(false)
 
 
   getCurrentUser(): Observable<User>{

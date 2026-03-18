@@ -5,29 +5,30 @@
   </div>
 
   <div class="sidebar__section sidebar__section--menu">
+
     <a
       class="sidebar__item"
-      routerLink="/dashboard"
-      routerLinkActive="sidebar__item--active"
+      [routerLink]="'/dashboard'"
+      [class.sidebar__item--active]="isActive('/dashboard')"
     >
       <span class="sidebar__item-label">Dashboard</span>
     </a>
 
     <a
       class="sidebar__item"
-      routerLink="/investimenti"
-      routerLinkActive="sidebar__item--active"
+      [routerLink]="'/investimenti'"
+      [class.sidebar__item--active]="isActive('/investimenti')"
     >
       <span class="sidebar__item-label">Investimenti</span>
     </a>
 
     <a
       class="sidebar__item"
-      routerLink="/polizze"
-      routerLinkActive="sidebar__item--active"
+      [routerLink]="'/polizze'"
+      [class.sidebar__item--active]="isActive('/polizze')"
     >
       <span class="sidebar__item-label">Polizze</span>
     </a>
+
   </div>
 </nav>
-
